@@ -6,16 +6,21 @@
 /*   By: drabadan <drabadan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:27:48 by drabadan          #+#    #+#             */
-/*   Updated: 2024/11/01 14:16:10 by drabadan         ###   ########.fr       */
+/*   Updated: 2024/11/06 10:50:44 by drabadan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# ifndef BUFER_SIZE
+#  define BUFER_SIZE 42
+# endif
+
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdint.h>
+# include <fcntl.h>
 
 typedef struct s_list
 {
@@ -67,5 +72,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 int		ft_lstsize(t_list *lst);
+
+//=========================== GNL part ======================================//
+char	*get_next_line(int fd);
+char	*join_and_free(char *line, char *bufer);
+char	*str_until_char(char *str, char c);
+char	*read_and_update(int fd, char *line, int *bit);
+void	get_clean(char **line, char *patteren);
+int		find_n(char *line);
 
 #endif
