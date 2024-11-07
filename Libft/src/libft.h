@@ -6,7 +6,7 @@
 /*   By: drabadan <drabadan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:27:48 by drabadan          #+#    #+#             */
-/*   Updated: 2024/11/06 10:50:44 by drabadan         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:46:50 by drabadan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ char	*ft_strchr(const char *s, int n);
 char	*ft_strrchr(const char *s, int n);
 char	*ft_strnstr(const char *hay, const char *need, size_t len);
 char	*ft_strdup(const char *src);
+char	*ft_strcpy(char *s1, char *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);

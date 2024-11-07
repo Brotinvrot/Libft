@@ -6,7 +6,7 @@
 /*   By: drabadan <drabadan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:06:50 by drabadan          #+#    #+#             */
-/*   Updated: 2024/11/06 10:53:17 by drabadan         ###   ########.fr       */
+/*   Updated: 2024/11/07 10:49:20 by drabadan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,12 @@ char	*read_and_update(int fd, char *line, int *bit)
 		return (NULL);
 	read_check = read(fd, buffer, BUFER_SIZE);
 	*bit = read_check;
-	if (read_check <= 0)
+if (read_check <= 0)
 	{
 		free(buffer);
 		if (*line != '\0' && read_check == 0)
+			return (line);
+		if (*line != '\0')
 			return (line);
 		free(line);
 		return (NULL);
@@ -54,6 +56,7 @@ char	*get_next_line(int fd)
 	static char	last_read[BUFER_SIZE + 1];
 
 	line = ft_strdup(last_read);
+	last_read[0] = '\0';
 	bit = 1;
 	while (find_n(line) != 0 && bit > 0)
 	{
@@ -66,7 +69,8 @@ char	*get_next_line(int fd)
 	}
 	result = str_until_char(line, '\n');
 	get_clean(&line, result);
-	ft_strlcpy(last_read, line, BUFER_SIZE);
+	if (line)
+		ft_strcpy(last_read, line);
 	free (line);
 	return (result);
 }
