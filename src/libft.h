@@ -6,7 +6,7 @@
 /*   By: drabadan <drabadan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:27:48 by drabadan          #+#    #+#             */
-/*   Updated: 2024/11/07 10:46:50 by drabadan         ###   ########.fr       */
+/*   Updated: 2024/11/11 14:46:37 by drabadan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		ft_isascii(int n);
 int		ft_isprint(int n);
 int		ft_tolower(int n);
 int		ft_toupper(int n);
+int		ft_atoi_hex(char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_atoi(const char *str);

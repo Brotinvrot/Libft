@@ -6,7 +6,7 @@
 /*   By: drabadan <drabadan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 16:06:50 by drabadan          #+#    #+#             */
-/*   Updated: 2024/11/07 10:49:20 by drabadan         ###   ########.fr       */
+/*   Updated: 2024/11/11 14:27:34 by drabadan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*read_and_update(int fd, char *line, int *bit)
 		return (NULL);
 	read_check = read(fd, buffer, BUFER_SIZE);
 	*bit = read_check;
-if (read_check <= 0)
+	if (read_check <= 0)
 	{
 		free(buffer);
 		if (*line != '\0' && read_check == 0)
