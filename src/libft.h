@@ -6,7 +6,7 @@
 /*   By: drabadan <drabadan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 20:27:48 by drabadan          #+#    #+#             */
-/*   Updated: 2024/11/11 14:46:37 by drabadan         ###   ########.fr       */
+/*   Updated: 2024/11/11 19:49:26 by drabadan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # ifndef BUFER_SIZE
-#  define BUFER_SIZE 42
+#  define BUFER_SIZE 1080
 # endif
 
 # include <stdlib.h>
